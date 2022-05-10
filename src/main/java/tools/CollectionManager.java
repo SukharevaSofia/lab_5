@@ -176,7 +176,7 @@ public class CollectionManager {
     }
 
     public String filterLessThanGenre(String genre){
-
+        String outputOrder;
         LinkedList<MusicBand> musicBands = new LinkedList<MusicBand>();
         MusicGenre newGenre = MusicGenre.valueOf(genre.toUpperCase());
         try {
@@ -186,7 +186,8 @@ public class CollectionManager {
                     musicBands.add(map.getValue());
                 }
             }
-            return musicBands.stream().distinct().toString();
+            outputOrder = Arrays.toString(new LinkedList[]{musicBands});
+            return outputOrder;
         }
         catch(NumberFormatException e){
             return "Аргумент должен быть названием жанра!";
