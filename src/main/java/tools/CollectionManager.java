@@ -211,7 +211,7 @@ public class CollectionManager {
     }
 
     public String printDescendingParticipants(){
-
+        String outputOrder = "";
         List<Integer> participantsOrder = new ArrayList<>();
 
         for (Map.Entry<Integer, MusicBand> map : data.entrySet()) {
@@ -219,7 +219,8 @@ public class CollectionManager {
         }
         participantsOrder.sort(Collections.reverseOrder());
 
-        return participantsOrder.toString();
+        outputOrder = Arrays.toString(new List[]{participantsOrder});
+        return outputOrder;
     }
 
     @Override
