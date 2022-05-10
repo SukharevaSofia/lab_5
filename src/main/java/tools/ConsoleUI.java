@@ -25,20 +25,20 @@ public final class ConsoleUI {
 
     /**
      * Выводит нужный объект
-     * строка начинается с "Message:"
+     * строка начинается с "Системное сообщение:"
      * для облегчения понимания
      */
     public static final void message(Object obj) {
-        output("Message: " + obj);
+        output("Системное сообщение: " + obj);
     }
 
     /**
      * Выводит нужный объект
-     * строка начинается с "Error:"
+     * строка начинается с "Ошибка:"
      * для облегчения понимания
      */
     public static final void error(Object obj) {
-        output("Error:" + obj);
+        output("Ошибка:" + obj);
     }
 
     /**

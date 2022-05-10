@@ -8,9 +8,9 @@ import tools.*;
 
 public class Main {
     public static void main(String[] args) {
-//    TUI.Run(args);
 
-        String readEnv = "readEnv";
+
+        String readEnv = "READENV";
         String writeEnv = "writeEnv";
         CollectionManager collectionManager = new CollectionManager(readEnv, writeEnv);
         CommandManager commandManager = new CommandManager(
