@@ -11,7 +11,7 @@ public class Main {
 
 
         String readEnv = "READENV";
-        String writeEnv = "writeEnv";
+        String writeEnv = "WRITENV";
         CollectionManager collectionManager = new CollectionManager(readEnv, writeEnv);
         CommandManager commandManager = new CommandManager(
                 new InsertCommand(),
@@ -27,8 +27,8 @@ public class Main {
                 new RemoveGreaterCommand(),
                 new ReplaceIfLowerCommand(),
                 new CountDescriptionCommand(),
-                new FilterGenreCommand()
-
+                new FilterGenreCommand(),
+                new PrintParticipantsCommand()
         );
         CommandFinder commandFinder = new CommandFinder(collectionManager, commandManager);
         commandFinder.commandSearcher();

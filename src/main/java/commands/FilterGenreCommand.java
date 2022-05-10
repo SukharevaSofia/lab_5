@@ -1,10 +1,10 @@
 package commands;
 
 /**
- * Команда filter_less_than_genre genre : вывести элементы, значение поля genre которых меньше заданного
+ * РљРѕРјР°РЅРґР° filter_less_than_genre genre : РІС‹РІРµСЃС‚Рё СЌР»РµРјРµРЅС‚С‹, Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ genre РєРѕС‚РѕСЂС‹С… РјРµРЅСЊС€Рµ Р·Р°РґР°РЅРЅРѕРіРѕ
  */
 public class FilterGenreCommand extends Command {
     public FilterGenreCommand() {
-        super("filter_less_than_genre genre", " вывести элементы, значение поля genre которых меньше заданного");
+        super("filter_less_than_genre genre", " РІС‹РІРµСЃС‚Рё СЌР»РµРјРµРЅС‚С‹, Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ genre РєРѕС‚РѕСЂС‹С… РјРµРЅСЊС€Рµ Р·Р°РґР°РЅРЅРѕРіРѕ");
     }
 }
