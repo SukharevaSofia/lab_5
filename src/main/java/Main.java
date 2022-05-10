@@ -23,9 +23,12 @@ public class Main {
                 new SaveCommand(),
                 new ShowCommand(),
                 new UpdateIdCommand(),
-                new ExitCommand(),
-                new RemoveLowerCommand(),
-                new ReplaceIfLowerCommand()
+                new FilterGenreCommand(),
+                new RemoveGreaterCommand(),
+                new ReplaceIfLowerCommand(),
+                new CountDescriptionCommand(),
+                new FilterGenreCommand()
+
         );
         CommandFinder commandFinder = new CommandFinder(collectionManager, commandManager);
         commandFinder.commandSearcher();

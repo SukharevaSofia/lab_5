@@ -1,6 +1,5 @@
 package tools;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,9 +15,12 @@ public class CommandManager {
     private SaveCommand saveCommand;
     private ShowCommand showCommand;
     private UpdateIdCommand updateIdCommand;
-    private ExitCommand exitCommand;
-    private RemoveLowerCommand removeLowerCommand;
+    private FilterGenreCommand exitCommand;
+    private RemoveGreaterCommand removeLowerCommand;
     private ReplaceIfLowerCommand replaceIfLowerCommand;
+    private CountDescriptionCommand countDescriptionCommand;
+    private FilterGenreCommand filterGenreCommand;
+    private PrintParticipantsCommand printParticipantsCommand;
 
     private final Integer HISTORY_SIZE = 6;
     private List<Command> commands;
@@ -26,8 +28,10 @@ public class CommandManager {
     public CommandManager(InsertCommand addCommand, ClearCommand clearCommand,
                           ExecuteScriptCommand executeScriptCommand, HelpCommand helpCommand,
                           InfoCommand infoCommand, RemoveKeyCommand removeKey,
-                          SaveCommand saveCommand, ShowCommand showCommand, UpdateIdCommand updateIdCommand, ExitCommand exitCommand,
-                          RemoveLowerCommand removeLowerCommand, ReplaceIfLowerCommand replaceIfLowerCommand) {
+                          SaveCommand saveCommand, ShowCommand showCommand, UpdateIdCommand updateIdCommand,
+                          FilterGenreCommand exitCommand,RemoveGreaterCommand removeLowerCommand,
+                          ReplaceIfLowerCommand replaceIfLowerCommand, CountDescriptionCommand countDescriptionCommand,
+                          FilterGenreCommand filterGenreCommand, PrintParticipantsCommand printParticipantsCommand) {
         this.addCommand = addCommand;
         this.clearCommand = clearCommand;
         this.executeScriptCommand = executeScriptCommand;
@@ -40,8 +44,12 @@ public class CommandManager {
         this.exitCommand = exitCommand;
         this.removeLowerCommand = removeLowerCommand;
         this.replaceIfLowerCommand = replaceIfLowerCommand;
+        this.countDescriptionCommand = countDescriptionCommand;
+        this.filterGenreCommand = filterGenreCommand;
+        this.printParticipantsCommand = printParticipantsCommand;
         commands = List.of(addCommand, clearCommand, executeScriptCommand, helpCommand,
-                infoCommand, removeKey, saveCommand, showCommand, updateIdCommand, exitCommand, removeLowerCommand, replaceIfLowerCommand);
+                infoCommand, removeKey, saveCommand, showCommand, updateIdCommand, exitCommand, removeLowerCommand,
+                replaceIfLowerCommand, countDescriptionCommand, filterGenreCommand, printParticipantsCommand);
 
     }
 
