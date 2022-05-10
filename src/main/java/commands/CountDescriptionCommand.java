@@ -1,13 +1,13 @@
 package commands;
 
 /**
- * Команда count_greater_than_description description : вывести количество элементов,
- * значение поля description которых больше заданного
+ * РљРѕРјР°РЅРґР° count_greater_than_description description : РІС‹РІРµСЃС‚Рё РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ,
+ * Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ description РєРѕС‚РѕСЂС‹С… Р±РѕР»СЊС€Рµ Р·Р°РґР°РЅРЅРѕРіРѕ
  */
 
 public class CountDescriptionCommand extends Command {
     public CountDescriptionCommand() {
-        super("count_greater_than_description", " вывести количество элементов, " +
-                "значение поля description которых больше заданного");
+        super("count_greater_than_description", " РІС‹РІРµСЃС‚Рё РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ, " +
+                "Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ description РєРѕС‚РѕСЂС‹С… Р±РѕР»СЊС€Рµ Р·Р°РґР°РЅРЅРѕРіРѕ");
     }
 }

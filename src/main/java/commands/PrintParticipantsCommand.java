@@ -1,12 +1,12 @@
 package commands;
 
 /**
- * Команда print_field_descending_number_of_participants : вывести значения поля numberOfParticipants
- * всех элементов в порядке убывания
+ * РљРѕРјР°РЅРґР° print_field_descending_number_of_participants : РІС‹РІРµСЃС‚Рё Р·РЅР°С‡РµРЅРёСЏ РїРѕР»СЏ numberOfParticipants
+ * РІСЃРµС… СЌР»РµРјРµРЅС‚РѕРІ РІ РїРѕСЂСЏРґРєРµ СѓР±С‹РІР°РЅРёСЏ
  */
 public class PrintParticipantsCommand extends Command{
     public PrintParticipantsCommand() {
-        super(" print_field_descending_number_of_participants"," вывести значения поля numberOfParticipants" +
-                " всех элементов в порядке убывания");
+        super(" print_field_descending_number_of_participants"," РІС‹РІРµСЃС‚Рё Р·РЅР°С‡РµРЅРёСЏ РїРѕР»СЏ numberOfParticipants" +
+                " РІСЃРµС… СЌР»РµРјРµРЅС‚РѕРІ РІ РїРѕСЂСЏРґРєРµ СѓР±С‹РІР°РЅРёСЏ");
     }
 }
