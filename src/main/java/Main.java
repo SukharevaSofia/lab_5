@@ -11,7 +11,7 @@ public class Main {
 
 
         String readEnv = "READENV";
-        String writeEnv = "WRITENV";
+        String writeEnv = "WRITEENV";
         CollectionManager collectionManager = new CollectionManager(readEnv, writeEnv);
         CommandManager commandManager = new CommandManager(
                 new InsertCommand(),

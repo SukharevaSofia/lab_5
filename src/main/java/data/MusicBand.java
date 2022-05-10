@@ -3,6 +3,8 @@ package data;
  * Класс MusicBand
  */
 
+import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.time.ZonedDateTime;
 
 public class MusicBand {
@@ -10,7 +12,7 @@ public class MusicBand {
     public static Integer counter = 0;
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null
-    private java.time.ZonedDateTime creationDate;
+    private Timestamp creationDate;
     private Integer numberOfParticipants; //Поле не может быть null, Значение поля должно быть больше 0
     private Integer albumsCount; //Поле может быть null, Значение поля должно быть больше 0
     private String description; //Поле может быть null
@@ -22,7 +24,7 @@ public class MusicBand {
         id = counter++;
         this.name = name;
         this.coordinates = coordinates;
-        this.creationDate = ZonedDateTime.now();
+        this.creationDate = new Timestamp(System.currentTimeMillis());
         this.numberOfParticipants = numberOfParticipants;
         this.albumsCount = albumsCount;
         this.description = description;
@@ -52,11 +54,11 @@ public class MusicBand {
 
     public void setCoordinates(Coordinates coordinates){this.coordinates = coordinates;}
 
-    public java.time.ZonedDateTime getCreationDate() {
+    public Timestamp getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(java.time.ZonedDateTime creationDate) {
+    public void setCreationDate(Timestamp creationDate) {
         this.creationDate = creationDate;
     }
 

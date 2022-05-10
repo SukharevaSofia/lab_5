@@ -50,7 +50,7 @@ public final class JsonManager {
      * @param collection Коллекция для записи.
      */
     public static String writeCollection(LinkedHashMap<Integer, MusicBand> collection, String env) {
-        try (   FileOutputStream file = new FileOutputStream(System.getenv(env));
+        try (FileOutputStream file = new FileOutputStream(System.getenv(env));
                 OutputStreamWriter collectionFileWriter = new OutputStreamWriter(file)) {
             collectionFileWriter.write(gson.toJson(collection));
             return "Записано!";

@@ -219,7 +219,7 @@ public class CollectionManager {
         }
         participantsOrder.sort(Collections.reverseOrder());
 
-        return participantsOrder.stream().distinct().toString();
+        return participantsOrder.toString();
     }
 
     @Override

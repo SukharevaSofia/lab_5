@@ -144,7 +144,7 @@ public class DataInput {
                     description = ConsoleUI.bufferedReader.readLine();
                 } else {
                     ConsoleUI.output("Введите описание группы: ");
-                    description = ConsoleUI.reader.next();
+                    description = ConsoleUI.reader.nextLine();
                 }
                 if (description.equals("")) {
                     ConsoleUI.output("Строка пустая! Введите имя группы.");
