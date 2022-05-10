@@ -29,9 +29,9 @@
                     <configuration>
                         <goal>jar:inplace</goal>
                         <archive>
-                            <manifestFile>C:\Users\sukha\IdeaProjects\lab_5_last_try\src\main\resources\META-INF\MANIFEST.MF</manifestFile>
+                            <manifestFile>src\main\resources\META-INF\MANIFEST.MF</manifestFile>
                         </archive>
-                        <outputDirectory>C:\Users\sukha\IdeaProjects\lab_5_last_try\out\artifacts</outputDirectory>
+                        <outputDirectory>out\artifacts</outputDirectory>
                     </configuration>
                 </plugin>
 
