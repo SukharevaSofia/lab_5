@@ -15,13 +15,14 @@ public final class ConsoleUI {
         message("Введите 'help' чтобы узнать список доступных команд.");
         message("Введите 'exit' чтобы выйти.");
     }
-
+/*
     /**
      * Подсказки для пользователя
-     */
+
     public static final void prompt() {
         output("> ");
     }
+    */
 
     /**
      * Выводит нужный объект

@@ -3,6 +3,8 @@ package tools;
 
 import exceptions.*;
 import java.io.*;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 import static tools.ConsoleUI.bufferedReader;
 import static tools.ConsoleUI.greeting;
@@ -24,7 +26,9 @@ public class CommandFinder{
             try{
 
                 String[] userCommand = ConsoleUI.reader.nextLine().split(" ");
-
+                String userCommandCheck = Arrays.stream(userCommand)
+                        .collect(Collectors.joining(""));
+                if (userCommandCheck.equals("")) continue;
                 if(userCommand.length > 2) throw new CommandException();
 
                 ConsoleUI.output(launchCommand(userCommand));
@@ -124,7 +128,7 @@ public class CommandFinder{
                 } else return "Команда не найдена";
 
             default:
-                return "Команда не найдена";
+                return "Команда debug";
         }
     }
 

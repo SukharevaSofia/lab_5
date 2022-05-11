@@ -70,9 +70,9 @@ public class CollectionManager {
     }
 
     public final String insert() {
-        var musicBand = DataInput.askMusicBand();
-        data.put(musicBand.getId(), musicBand);
-        lastInitTime = LocalDate.now();
+        var musicBand = DataInput.askMusicBand(); //asks user new band
+        data.put(musicBand.getId(), musicBand); //puts id + new band element into collection
+        lastInitTime = LocalDate.now(); //updates init time
         return "Успешный ввод!";
     }
 
@@ -117,6 +117,7 @@ public class CollectionManager {
         return JsonManager.writeCollection(data, writeEnv);
 
     }
+
 
     public String removeGreater(String element) {
 
