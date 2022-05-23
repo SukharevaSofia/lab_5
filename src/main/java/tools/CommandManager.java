@@ -54,7 +54,7 @@ public class CommandManager {
     }
 
 
-    public String help() {
+    public String help(String input) {
         return commands.stream()
                 .map(x -> x.toString())
                 .collect(Collectors.joining("\n"));

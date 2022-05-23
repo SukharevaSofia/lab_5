@@ -137,17 +137,31 @@ public class DataInput {
 
     public static String askDescription() {
         String description;
+        int imsorry = 0;
+        /*
+        Проблема: при insert программа выводила на экран "введите описание" и
+        сразу же после этого "строка пустая! повторите ввод".
+        Фикс (костыль и мне стыдно, нужно сделать умнее но дедлайн...):
+        в начале imsorry=0, программа просит ввести описание. Чтобы
+        избежать сообщения о пустой строке, при imsorry==0 программа не
+        выводит это сообщение. После чего imsorry+=1 и если поле правда пустое
+        программа уже выведет сообщение об этом
+         */
         while (true) {
 
             try {
                 if (CommandFinder.scriptMode) {
                     description = ConsoleUI.bufferedReader.readLine();
                 } else {
+                    if (imsorry == 0){
                     ConsoleUI.output("Введите описание группы: ");
                     description = ConsoleUI.reader.nextLine();
+                    }
+                    else {description = ConsoleUI.reader.nextLine();}
                 }
-                if (description.equals("")) {
-                    ConsoleUI.output("Строка пустая! Введите имя группы.");
+                if (description.equals("") ) {
+                    if(imsorry == 0){ imsorry += 1; continue;}
+                    ConsoleUI.output("Строка пустая! Введите описание группы.");
                     continue;
                 }
                 break;

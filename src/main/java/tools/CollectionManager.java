@@ -28,7 +28,7 @@ public class CollectionManager {
         data = JsonManager.readCollection(readEnv);
     }
 
-    public final String show() {
+    public String show(String input) {
         if(data.size() > 0) {
             String output = data.entrySet().stream()
                     .map(entry -> entry.getValue().toString())
@@ -38,7 +38,7 @@ public class CollectionManager {
         else return "Коллекция пуста";
     }
 
-    public final String info(){
+    public final String info(String input){
 
         try{
             if(lastSaveTime == null || lastInitTime == null) throw new NullPointerException();
@@ -69,7 +69,7 @@ public class CollectionManager {
         }
     }
 
-    public final String insert() {
+    public String insert(String input) {
         var musicBand = DataInput.askMusicBand(); //asks user new band
         data.put(musicBand.getId(), musicBand); //puts id + new band element into collection
         lastInitTime = LocalDate.now(); //updates init time
@@ -89,12 +89,12 @@ public class CollectionManager {
         }
     }
 
-    public final String clear() {
+    public String clear(String input) {
         data.clear();
         return "Коллекция очищена";
     }
 
-    public final String updateById(String id) {
+    public String updateById(String id) {
 
         try {
             int newId = Integer.parseInt(id);
@@ -110,12 +110,9 @@ public class CollectionManager {
         }
     }
 
-    public String save(){
-
-        File file = new File("fileName");//добавить имя файла
+    public String save(String input){
         lastSaveTime = LocalDate.now();
         return JsonManager.writeCollection(data, writeEnv);
-
     }
 
 
@@ -212,7 +209,7 @@ public class CollectionManager {
         }
     }
 
-    public String printDescendingParticipants(){
+    public String printDescendingParticipants(String input){
         String outputOrder = "";
         List<Integer> participantsOrder = new ArrayList<>();
 
